@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card__giratorio {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .card__giratorio-conteudo {
+            position: relative;
+            width: 95%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card__giratorio:hover .card__giratorio-conteudo {
+            transform: rotateY(180deg);
+        }
+
+        .card__giratorio-conteudo--frente,
+        .card__giratorio-conteudo--traseira {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card__giratorio-conteudo--frente {
+            background: linear-gradient(-229deg, #e96900, #272626);
+        }
+
+        .card__giratorio-conteudo--traseira {
+            background: linear-gradient(229deg, #272626, #e96900);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card__giratorio-conteudo--traseira h1,
+        .card__giratorio-conteudo--traseira p {
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card__giratorio-conteudo--traseira h1 {
+            font-size: 1.7rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(2px 2px 5px black);
+            opacity: .7;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--codigo a seguir: Primeiro Bloco BMW & Volkswagen -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/favicons/7df6470afbd3ff2f15a528aec4069c06.png" alt="BMW" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/favicons/7df6470afbd3ff2f15a528aec4069c06.png" alt="BMW" class="logo">
+                    <h1>BMW</h1>
+                    <p>Piloto BMW</p>
+                    <a href="https://simplecard.online/bmw">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/042cd324f05a4206d9d0f7efcafabb00.svg" alt="Logo Volkswagen" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/042cd324f05a4206d9d0f7efcafabb00.svg" alt="Logo Volkswagen" class="logo">
+                    <h1>Volkswagen</h1>
+                    <p>Piloto VW</p>
+                    <a href="https://simplecard.online/volkswagen">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Segundo Bloco Chery & Renault -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/e828b1528643580435e13db5dadc3f66.svg" alt="Logo Chery" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/e828b1528643580435e13db5dadc3f66.svg" alt="Logo Chery" class="logo">
+                    <h1>Chery</h1>
+                    <p>Piloto Chery</p>
+                    <a href="https://simplecard.online/chery">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/06ee93c91122e57af2b1614465cc156b.svg" alt="Logo Renault" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/06ee93c91122e57af2b1614465cc156b.svg" alt="Logo Renault" class="logo">
+                    <h1>Renault</h1>
+                    <p>Piloto Renault</p>
+                    <a href="https://simplecard.online/renault">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Terceiro Bloco Fiat & Jeep -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/8a9939eb0f68232a6cefb9b194e9ff32.svg" alt="Logo FIAT" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/8a9939eb0f68232a6cefb9b194e9ff32.svg" alt="Logo FIAT" class="logo">
+                    <h1>Fiat</h1>
+                    <p>Piloto Fiat</p>
+                    <a href="https://simplecard.online/fiat">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/a562cb04008c93bd4c24fca327b133ac.svg" alt="Logo jeep" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/a562cb04008c93bd4c24fca327b133ac.svg" alt="Logo jeep" class="logo">
+                    <h1>jeep</h1>
+                    <p>Piloto jeep</p>
+                    <a href="https://simplecard.online/jeep">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Quarto Bloco BYD & Nissan -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/416a5649732448fdbffd65f2422580d4.svg" alt="Logo byd" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/416a5649732448fdbffd65f2422580d4.svg" alt="Logo byd" class="logo">
+                    <h1>BYD</h1>
+                    <p>Piloto BYD</p>
+                    <a href="https://simplecard.online/byd">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/2d8dd8a0788ba15ac561fc4404eb326d.svg" alt="Logo nissan" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/2d8dd8a0788ba15ac561fc4404eb326d.svg" alt="Logo nissan" class="logo">
+                    <h1>NISSAN</h1>
+                    <p>Piloto Nissan</p>
+                    <a href="https://simplecard.online/nissan">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Quinto Bloco Chevrolet & Volvo -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/29ba30ebb1b287c0cdae834b3ca6f5b0.svg" alt="Logo chevrolet" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/29ba30ebb1b287c0cdae834b3ca6f5b0.svg" alt="Logo chevrolet" class="logo">
+                    <h1>CHEVROLET</h1>
+                    <p>Piloto Chevrolet</p>
+                    <a href="https://simplecard.online/chevrolet">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/6b51bbe0adfe7f82d7f9b0b17392c8f7.svg" alt="Logo volvo" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/6b51bbe0adfe7f82d7f9b0b17392c8f7.svg" alt="Logo volvo" class="logo">
+                    <h1>VOLVO</h1>
+                    <p>Piloto Volvo</p>
+                    <a href="https://simplecard.online/volvo">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Sexto Bloco Kia & Citroen -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/9560aba184280cae6fd199bb77535d26.svg" alt="Logo kia" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/9560aba184280cae6fd199bb77535d26.svg" alt="Logo kia" class="logo">
+                    <h1>Kia</h1>
+                    <p>Piloto Kia</p>
+                    <a href="https://simplecard.online/kia">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/2f21a7a09872197c40b26ec1027fb909.svg" alt="Logo citroen" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/2f21a7a09872197c40b26ec1027fb909.svg" alt="Logo citroen" class="logo">
+                    <h1>Citroen</h1>
+                    <p>Piloto Citroen</p>
+                    <a href="https://simplecard.online/citroen">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Setimo Bloco Peugeot & Mitsubishi -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/4ba6294538f11de650a9d856d146a0fb.svg" alt="Logo peugeot" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/4ba6294538f11de650a9d856d146a0fb.svg" alt="Logo peugeot" class="logo">
+                    <h1>Peugeot</h1>
+                    <p>Piloto Peugeot</p>
+                    <a href="https://simplecard.online/peugeot">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/73d8156b2668c825ee0bb1c1d4d9905e.svg" alt="Logo mitsubishi" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/73d8156b2668c825ee0bb1c1d4d9905e.svg" alt="Logo mitsubishi" class="logo">
+                    <h1>Mitsubishi</h1>
+                    <p>Piloto Mitsubishi</p>
+                    <a href="https://simplecard.online/mitsubishi">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--codigo a seguir: Oitavo Bloco Mercedes & Honda -->
+    <div class="Container" style="display: flex;">
+
+        <div class="card__giratorio">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/41c2d88c8abd75af9bf1108d9113ae95.svg" alt="Logo mercedes" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/41c2d88c8abd75af9bf1108d9113ae95.svg" alt="Logo mercedes" class="logo">
+                    <h1>Mercedes</h1>
+                    <p>Piloto Mercedes</p>
+                    <a href="https://simplecard.online/mercedes">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card__giratorio" style="display: flex;">
+
+            <div class="card__giratorio-conteudo">
+
+                <div class="card__giratorio-conteudo--frente">
+                    <img src="https://simplecard.online/uploads/block_images/63dc7ec366cf37095862609a260f0f55.svg" alt="Logo honda" class="logo">
+
+                </div>
+
+                <div class="card__giratorio-conteudo--traseira">
+                    <img src="https://simplecard.online/uploads/block_images/63dc7ec366cf37095862609a260f0f55.svg" alt="Logo honda" class="logo">
+                    <h1>Honda</h1>
+                    <p>Piloto Honda</p>
+                    <a href="https://simplecard.online/honda">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</body>
+
+</html>
